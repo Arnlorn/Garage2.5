@@ -13,7 +13,7 @@ namespace Garage_2._0.Models
         public int Id { get; set; }
 
         [Display(Name = "Type of vehicle")]
-        public Types Type { get; set; }
+        public string Type { get; set; }
 
         [Display(Name = "Registration number")]
         public string RegNr { get; set; }
@@ -25,7 +25,7 @@ namespace Garage_2._0.Models
         public DateTime Now => DateTime.Now;
 
         [Display(Name = "Parked for")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:hh\\:mm\\:ss}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:hh\\:mm\\:ss}")] // OBS: Lägg till dagar i de fall det finns dagar.
         public TimeSpan Duration => DateTime.Now - TimeStamp;
 
         [Display(Name = "Price per minute")]
