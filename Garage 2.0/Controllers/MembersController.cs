@@ -36,7 +36,7 @@ namespace Garage_2._0.Models
         }
 
         // GET: Members/Create
-        public ActionResult Create()
+        public ActionResult Register()
         {
             return View();
         }
@@ -46,7 +46,7 @@ namespace Garage_2._0.Models
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,StreetAdress,PostalCode,City,PhoneNumber")] Member member)
+        public ActionResult Register([Bind(Include = "Id,FirstName,LastName,StreetAdress,PostalCode,City,PhoneNumber")] Member member)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace Garage_2._0.Models
         }
 
         // GET: Members/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Remove(int? id)
         {
             if (id == null)
             {
@@ -105,7 +105,7 @@ namespace Garage_2._0.Models
         }
 
         // POST: Members/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost, ActionName("Remove")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {

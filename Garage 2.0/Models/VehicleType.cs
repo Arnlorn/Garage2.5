@@ -8,7 +8,7 @@ namespace Garage_2._0.Models
 {
     public class VehicleType
     {
-        [Display(Name = "Vehicletype")]
+        [Display(Name = "Type")]
         [Key]
         public string Name { get; set; }
 

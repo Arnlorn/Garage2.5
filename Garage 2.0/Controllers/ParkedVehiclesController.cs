@@ -68,7 +68,7 @@ namespace Garage_2._0.Models
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Type,RegNr,Color,Make,Model,NrOfWheels,TimeStamp")] ParkedVehicle parkedVehicle)
+        public ActionResult Create([Bind(Include = "Id, VehicleTypeName, Member, RegNr,Color,Make,Model,NrOfWheels,TimeStamp")] ParkedVehicle parkedVehicle)
         {
             //if (ModelState.IsValid)
             //{

@@ -1,16 +1,16 @@
 ﻿@model Garage_2._0.Models.Member
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Delete";
 }
 
-<h2>Details</h2>
+<h2>Remove</h2>
 
+<h3>Are you sure you want to permanently remove this member from the memberlist ?</h3>
 <div>
-    <h4>Member</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>@Html.DisplayNameFor(model => model.FullName) </dt>
+        <dt>@Html.DisplayNameFor(model => model.FullName)</dt>
         <dd>@Html.DisplayFor(model => model.FullName)</dd>
 
         <dt>@Html.DisplayNameFor(model => model.StreetAdress)</dt>
@@ -21,10 +21,14 @@
 
         <dt>@Html.DisplayNameFor(model => model.PhoneNumber)</dt>
         <dd>@Html.DisplayFor(model => model.PhoneNumber)</dd>
-
     </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Remove" class="btn btn-default" /> |
+            @Html.ActionLink("Back to memberlist", "Index")
+        </div>
+    }
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

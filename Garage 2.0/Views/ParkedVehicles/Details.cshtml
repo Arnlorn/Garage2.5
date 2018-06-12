@@ -10,60 +10,32 @@
     <h4>ParkedVehicle</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.VehicleTypeName)
-        </dt>
+        <dt>@Html.DisplayNameFor(model => model.Member.FirstName)</dt>
+        <dd>@Html.DisplayFor(model => model.Member.FirstName) </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.VehicleTypeName)
-        </dd>
+        <dt>@Html.DisplayNameFor(model => model.Member.LastName)</dt>
+        <dd>@Html.DisplayFor(model => model.Member.LastName) </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.RegNr)
-        </dt>
+        <dt>@Html.DisplayNameFor(model => model.VehicleTypeName)</dt>
+        <dd>@Html.DisplayFor(model => model.VehicleTypeName) </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.RegNr)
-        </dd>
+        <dt>@Html.DisplayNameFor(model => model.RegNr)</dt>
+        <dd>@Html.DisplayFor(model => model.RegNr)</dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Color)
-        </dt>
+        <dt>@Html.DisplayNameFor(model => model.Color)</dt>
+        <dd>@Html.DisplayFor(model => model.Color)</dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Color)
-        </dd>
+        <dt>@Html.DisplayNameFor(model => model.Make)</dt>
+        <dd>@Html.DisplayFor(model => model.Make)</dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Make)
-        </dt>
+        <dt>@Html.DisplayNameFor(model => model.Model)</dt>
+        <dd>@Html.DisplayFor(model => model.Model) </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Make)
-        </dd>
+        <dt>@Html.DisplayNameFor(model => model.NrOfWheels)</dt>
+        <dd>@Html.DisplayFor(model => model.NrOfWheels)</dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Model)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Model)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.NrOfWheels)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.NrOfWheels)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TimeStamp)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TimeStamp)
+        <dt>@Html.DisplayNameFor(model => model.TimeStamp)</dt>
+        <dd>@Html.DisplayFor(model => model.TimeStamp)
         </dd>
 
     </dl>

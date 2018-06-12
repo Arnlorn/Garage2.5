@@ -213,8 +213,8 @@
     <Content Include="Views\Details.cshtml" />
     <Content Include="Views\ParkedVehicles\Reciept.cshtml" />
     <Content Include="Views\ParkedVehicles\Statistic.cshtml" />
-    <Content Include="Views\Members\Create.cshtml" />
-    <Content Include="Views\Members\Delete.cshtml" />
+    <Content Include="Views\Members\Register.cshtml" />
+    <Content Include="Views\Members\Remove.cshtml" />
     <Content Include="Views\Members\Details.cshtml" />
     <Content Include="Views\Members\Edit.cshtml" />
     <Content Include="Views\Members\Index.cshtml" />
