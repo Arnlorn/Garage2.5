@@ -12,6 +12,9 @@ namespace Garage_2._0.Models
         [Display(Name = "Transaction ID")]
         public int Id { get; set; }
 
+        [Display(Name = "Registered owner")]
+        public String Owner { get; set; }
+
         [Display(Name = "Type of vehicle")]
         public string Type { get; set; }
 

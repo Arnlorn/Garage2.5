@@ -20,6 +20,28 @@ namespace Garage_2._0.Models
             return View(db.Members.ToList());
         }
 
+        public ActionResult Search(string FilterString)
+        {
+            //Enum.TryParse(FilterString, true, out Types type);
+            var memberSearch = db.Members
+                .Where(e => e.City.Contains(FilterString)
+                            || e.FirstName.Contains(FilterString) || e.LastName.Contains(FilterString)
+                            || e.PhoneNumber.Contains(FilterString) || e.PostalCode.Contains(FilterString)//e.Type == type)
+                            || e.StreetAdress.Contains(FilterString) || e.City.Contains(FilterString))
+                .Select(e => new MemberViewModel()
+                {
+                    FirstName = e.FirstName,
+                    LastName = e.LastName,
+                    PhoneNumber = e.PhoneNumber,
+                    PostalCode = e.PostalCode,
+                    StreetAdress = e.StreetAdress,
+                    City = e.City
+                }).ToList();
+
+            return View(memberSearch);
+        }
+
+
         // GET: Members/Details/5
         public ActionResult Details(int? id)
         {

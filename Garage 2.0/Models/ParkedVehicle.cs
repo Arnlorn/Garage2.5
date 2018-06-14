@@ -35,6 +35,7 @@ namespace Garage_2._0.Models
 
         // Navigational Property
         [ForeignKey("Member")]
+        [Display(Name = "Owner")]
         public int MemberId { get; set; }
         public virtual Member Member { get; set; }
 
@@ -42,6 +43,8 @@ namespace Garage_2._0.Models
         [Display(Name = "Type")]
         [ForeignKey("VehicleType")]
         public string VehicleTypeName { get; set; }
+
+        [Display(Name = "Type")]
         public virtual VehicleType VehicleType { get; set; }
     }
 }

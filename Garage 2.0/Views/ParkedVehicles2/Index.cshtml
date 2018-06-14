@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Garage_2._0.Models.ParkedVehiclesViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Overview</h2>
+
+<p>
+    @Html.ActionLink("Park New Vehicle", "Park")
+</p>
+
+<form class="form-inline md-form mr-auto mb-4">
+    <input class="form-control" type="text" placeholder="contains" aria-label="Filter" name="FilterString">
+    <button class="btn btn-outline btn-rounded btn-sm my-0" type="submit">Search</button>
+</form>
+
+<table class="table sortable table-striped">
+    <tr>
+        <th> @Html.DisplayNameFor(model => model.Owner) </th>
+        <th> @Html.DisplayNameFor(model => model.Type)</th>
+        <th> @Html.DisplayNameFor(model => model.RegNr) </th>
+        <th> @Html.DisplayNameFor(model => model.TimeStamp)</th>
+        <th class="sorttable_nosort"></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Owner)</td>
+            <td>@Html.DisplayFor(modelItem => item.Type)</td>
+            <td>@Html.DisplayFor(modelItem => item.RegNr)</td>
+            <td>@Html.DisplayFor(modelItem => item.TimeStamp) </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Check out", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+<script src="~/Scripts/sorttable.js"></script>

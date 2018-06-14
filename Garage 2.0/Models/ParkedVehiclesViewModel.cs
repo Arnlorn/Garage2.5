@@ -5,6 +5,7 @@ namespace Garage_2._0.Models
     public class ParkedVehiclesViewModel
     {
         public int Id { get; set; }
+        public string Owner { get; set; }
         public string Type { get; set; }
         public string RegNr { get; set; }
         public string Color { get; set; }

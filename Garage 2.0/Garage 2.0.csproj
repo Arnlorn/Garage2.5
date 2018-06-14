@@ -148,7 +148,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\ParkedVehiclesController.cs" />
     <Compile Include="DataAccessLayer\RegisterContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -160,6 +159,8 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Member.cs" />
     <Compile Include="Controllers\MembersController.cs" />
+    <Compile Include="Controllers\ParkedVehicles2Controller.cs" />
+    <Compile Include="Models\MemberViewModel.cs" />
     <Compile Include="Models\RecieptViewModel.cs" />
     <Compile Include="Models\ParkedVehiclesViewModel.cs" />
     <Compile Include="Models\StatisticViewModel.cs" />
@@ -175,6 +176,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Resources\Garage25.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -203,16 +205,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\ParkedVehicles\Create.cshtml" />
-    <Content Include="Views\ParkedVehicles\Delete.cshtml" />
-    <Content Include="Views\ParkedVehicles\Details.cshtml" />
-    <Content Include="Views\ParkedVehicles\Edit.cshtml" />
-    <Content Include="Views\ParkedVehicles\Index.cshtml" />
-    <Content Include="Views\ParkedVehicles\Filter.cshtml" />
+    <Content Include="Views\ParkedVehicles2\Filter.cshtml" />
     <Content Include="Views\RecieptViewModels\Details.cshtml" />
     <Content Include="Views\Details.cshtml" />
-    <Content Include="Views\ParkedVehicles\Reciept.cshtml" />
-    <Content Include="Views\ParkedVehicles\Statistic.cshtml" />
+    <Content Include="Views\ParkedVehicles2\Reciept.cshtml" />
+    <Content Include="Views\ParkedVehicles2\Statistic.cshtml" />
     <Content Include="Views\Members\Register.cshtml" />
     <Content Include="Views\Members\Remove.cshtml" />
     <Content Include="Views\Members\Details.cshtml" />
@@ -223,6 +220,13 @@
     <Content Include="Views\VehicleTypes\Details.cshtml" />
     <Content Include="Views\VehicleTypes\Edit.cshtml" />
     <Content Include="Views\VehicleTypes\Index.cshtml" />
+    <Content Include="Views\ParkedVehicles2\Park.cshtml" />
+    <Content Include="Views\ParkedVehicles2\Delete.cshtml" />
+    <Content Include="Views\ParkedVehicles2\Details.cshtml" />
+    <Content Include="Views\ParkedVehicles2\Edit.cshtml" />
+    <Content Include="Views\ParkedVehicles2\Index.cshtml" />
+    <Content Include="Views\Members\Search.cshtml" />
+    <Content Include="Views\ParkedVehicles2\DetailedView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
